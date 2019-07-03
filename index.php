@@ -2,12 +2,11 @@
 
 require 'mysql.php';
 $db = DataBase::initDB();
-$c = 0;
-$stmt = $db->query("SELECT User_account FROM z_line_test");
+
+$stmt = $db->query("SELECT * FROM `z_line_test` WHERE 1");
 foreach ($stmt->fetchAll() as $row) {
-    echo 'hello';
-    echo $row['a'];
-    break;
+    $a = $row['a'];
 }
+echo $a;
 echo 'end';
 ?>
