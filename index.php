@@ -7,8 +7,8 @@ $dbname = 'heroku_sr2fjj6t';
 $mongoClient = new MongoClient('mongodb://' . $dbhost);
 $db = $mongoClient->$dbname;
 
-// 取得 demo 這個 collection
-$cDemo = $db->demo;
+// 取得 test 這個 collection
+$cDemo = $db->test;
 
 // 要儲存的資料
 $record = array(
@@ -17,7 +17,7 @@ $record = array(
   'roles' => array('developer', 'webmaster')
 );
 
-// 將資料儲存至 demo 這個 collection 中
+// 將資料儲存至 test 這個 collection 中
 $cDemo->save($record);
 
 // 設定查詢條件
