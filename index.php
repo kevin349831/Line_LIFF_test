@@ -1,11 +1,9 @@
 <?php
-   // connect to mongodb
-   $m = new MongoClient();
 
-   echo "Connection to database successfully<br/>";
-   // select a database
-   $db = $m->mydb;
+$client = new MongoDB\Client(
+    'mongodb+srv://heroku_sr2fjj6t:qrkv5jk2rvjc1iv790de7ng7fi@ds147207.mlab.com:47207/heroku_sr2fjj6t/test?retryWrites=true&w=majority'
+);
 
-   echo "Database mydb selected";
-?>
+$db = $client->test;
 
+//mongodb://heroku_sr2fjj6t:qrkv5jk2rvjc1iv790de7ng7fi@ds147207.mlab.com:47207/heroku_sr2fjj6t
