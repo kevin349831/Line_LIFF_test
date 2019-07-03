@@ -6,7 +6,7 @@ $dbname = 'ds147207';
 
 echo '1';
 
-$mongoClient = new \MongoClient('mongodb://' . $dbhost);
+$mongoClient = new MongoClient('mongodb://' . $dbhost);
 
 echo '2';
 ?>
