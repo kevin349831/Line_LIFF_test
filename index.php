@@ -1,6 +1,6 @@
 <?php
 // MongoDB 伺服器設定
-$dbhost = 'localhost';
+$dbhost = 'ds147207.mlab.com:47207/heroku_sr2fjj6t';
 $dbname = 'ds147207';
 
 // 連線到 MongoDB 伺服器
@@ -14,7 +14,7 @@ $mongoClient = new \MongoClient(
             'password' => 'qrkv5jk2rvjc1iv790de7ng7fi'
         )
     );
-
+//mongodb://heroku_sr2fjj6t:qrkv5jk2rvjc1iv790de7ng7fi@ds147207.mlab.com:47207/heroku_sr2fjj6t
 $db = $mongoClient->$dbname;
 
 // 取得 test 這個 collection
