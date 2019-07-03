@@ -1,15 +1,34 @@
 <?php
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/test');
+// MongoDB 伺服器設定
+$dbhost = 'ds147207.mlab.com:47207/heroku_sr2fjj6t';
+$dbname = 'heroku_sr2fjj6t';
 
-// 建立 model，後面的 {title: String} 就是 Schema
-let Post = mongoose.model('Post', { title: String });
-// 建立實體Document
-let post = new Post({ title: 'My Awesome Goals for 2016!' });
-// 存入資料庫
-post.save(function (err) {
-    if (err) {
-        console.log(err);
-    }
-    console.log('Blog post saved!');
-});
+// 連線到 MongoDB 伺服器
+$mongoClient = new MongoClient('mongodb://' . $dbhost);
+$db = $mongoClient->$dbname;
+
+// 取得 demo 這個 collection
+$cDemo = $db->demo;
+
+// 要儲存的資料
+$record = array(
+  'firstName' => 'G.T.',
+  'lastName' => 'Wang',
+  'roles' => array('developer', 'webmaster')
+);
+
+// 將資料儲存至 demo 這個 collection 中
+$cDemo->save($record);
+
+// 設定查詢條件
+$queryCondition = array(
+  'firstName' => 'G.T.',
+  'lastName' => 'Wang'
+);
+
+// 查詢資料
+$result = $cDemo->findOne($queryCondition);
+
+// 輸出資料
+print_r($result);
 ?>
