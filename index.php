@@ -1,7 +1,7 @@
 <?php
 echo 'hello';
 
-$dbhost = 'ds147207.mlab.com:47207/heroku_sr2fjj6t';
+$dbhost = 'ds147207.mlab.com:47207';
 $dbname = 'ds147207';
 
 echo '1';
