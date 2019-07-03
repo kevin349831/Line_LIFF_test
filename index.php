@@ -1,7 +1,7 @@
 <?php
 echo 'hello';
 
-$dbhost = 'ds147207.mlab.com:47207';
+$dbhost = 'ds147207.mlab.com';
 $dbname = 'ds147207';
 
 echo '1';
