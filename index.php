@@ -4,7 +4,7 @@ $dbhost = 'ds147207.mlab.com:47207/heroku_sr2fjj6t';
 $dbname = 'heroku_sr2fjj6t';
 
 // 連線到 MongoDB 伺服器
-$mongoClient = new MongoClient('mongodb://' . $dbhost);
+$mongoClient = new \MongoClient('mongodb://' . $dbhost);
 $db = $mongoClient->$dbname;
 
 // 取得 test 這個 collection
