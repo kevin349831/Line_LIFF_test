@@ -1,11 +1,11 @@
 <?php
-echo 'hello';
+   // connect to mongodb
+   $m = new MongoClient();
 
-$dbhost = 'ds147207.mlab.com';
-$dbname = 'ds147207';
+   echo "Connection to database successfully<br/>";
+   // select a database
+   $db = $m->mydb;
 
-echo '1';
-
-
-echo '2';
+   echo "Database mydb selected";
 ?>
+
