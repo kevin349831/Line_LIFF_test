@@ -1,7 +1,7 @@
 <?php
 
 $client = new MongoDB\Client(
-    'mongodb+srv://heroku_sr2fjj6t:qrkv5jk2rvjc1iv790de7ng7fi@ds147207.mlab.com:47207/heroku_sr2fjj6t/test?retryWrites=true&w=majority'
+    'mongodb://heroku_sr2fjj6t:qrkv5jk2rvjc1iv790de7ng7fi@ds147207.mlab.com:47207/heroku_sr2fjj6t'
 );
 
 $db = $client->test;
