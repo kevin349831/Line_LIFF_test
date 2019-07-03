@@ -5,7 +5,7 @@ $dbname = 'ds147207';
 
 // 連線到 MongoDB 伺服器
 $mongoClient = new \MongoClient('mongodb://' . $dbhost);
-
+echo 'hello';
 $mongoClient = new \MongoClient(
         'mongodb://' . $dbhost,
         array(
@@ -41,4 +41,5 @@ $result = $cDemo->findOne($queryCondition);
 
 // 輸出資料
 print_r($result);
+echo 'end';
 ?>
